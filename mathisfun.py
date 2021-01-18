@@ -23,16 +23,20 @@ class Vector2D:
          return math.sqrt((self.v_end.x - self.v_start.x)**2 - (self.v_end.y - self.v_start.y)**2)
 
      def add(self , another: Vector2D) -> Vector2D:
-         return Vector2D(v_start=Point2D(x=self.v_start.x + another.v_start.x, y=self.v_start.y + another.v_start.y), v_end=Point2D(x=self.v_end.x + another.v_end.x, y=self.v_end.y + another.v_end.y))
+         return Vector2D(v_start=Point2D(x=self.v_start.x + another.v_start.x, y=self.v_start.y + another.v_start.y),
+                         v_end=Point2D(x=self.v_end.x + another.v_end.x, y=self.v_end.y + another.v_end.y))
 
      def multiply_by_scalar(self, p_lambda) -> Vector2D:
-         return Vector2D(v_start=Point2D(x=self.v_start.x * p_lambda, y=self.v_start.y * p_lambda), v_end=Point2D(x=self.v_end.x * p_lambda, y=self.v_end.y * p_lambda))
+         return Vector2D(v_start=Point2D(x=self.v_start.x * p_lambda, y=self.v_start.y * p_lambda),
+                         v_end=Point2D(x=self.v_end.x * p_lambda, y=self.v_end.y * p_lambda))
 
      def __add__(self, another: Vector2D) -> Vector2D:
-         return Vector2D(v_start=Point2D(x=self.v_start.x + another.v_start.x, y=self.v_start.y + another.v_start.y), v_end=Point2D(x=self.v_end.x + another.v_end.x, y=self.v_end.y + another.v_end.y))
+         return Vector2D(v_start=Point2D(x=self.v_start.x + another.v_start.x, y=self.v_start.y + another.v_start.y),
+                         v_end=Point2D(x=self.v_end.x + another.v_end.x, y=self.v_end.y + another.v_end.y))
 
      def __mul__(self, p_lambda: int) -> Vector2D:
-         return Vector2D(v_start=Point2D(x=self.v_start.x * p_lambda, y=self.v_start.y * p_lambda), v_end=Point2D(x=self.v_end.x * p_lambda, y=self.v_end.y * p_lambda))
+         return Vector2D(v_start=Point2D(x=self.v_start.x * p_lambda, y=self.v_start.y * p_lambda),
+                         v_end=Point2D(x=self.v_end.x * p_lambda, y=self.v_end.y * p_lambda))
 
 punkt1 = Point2D(0.9, 1.1)
 punkt2 = Point2D(1.7, 3.5)
